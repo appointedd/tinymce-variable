@@ -29,6 +29,9 @@
                 menubar: false,
                 toolbar: "bold,italic,mybutton,code",
                 statusbar: false,
+                
+                // variable plugin related
+                plugins: "variable,code",
 
                 setup : function(ed) {
                     window.tester = ed;
@@ -36,7 +39,7 @@
                         title : 'My button',
                         text : 'Insert variable',
                         onclick : function() {
-                            ed.plugins.variables.addVariable('account_id');
+                            ed.plugins.variable.addVariable('account_id');
                         }
                     });
 
@@ -45,8 +48,6 @@
                     });
                 },
 
-                // variable plugin related
-                plugins: "variables,code",
                 variable_mapper: {
                     username: 'Username',
                     phone: 'Phone',
